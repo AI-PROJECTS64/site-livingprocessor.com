@@ -1,345 +1,198 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>LivingProcessor.com — From Silicon to Living Compute</title>
-  <meta name="description" content="LivingProcessor.com — descriptive, category-defining .com domain for the next generation of compute: biocomputing, organoid intelligence and hybrid wetware/silicon architectures. Asset for acquisition only." />
+  <title>LivingProcessor.com — Actif deeptech, disponible à l’acquisition</title>
+  <meta name="description" content="LivingProcessor.com — nom de catégorie descriptif pour l’ère du « living compute » : biocomputing, intelligence organoïde, processeurs biologiques & architectures hybrides wetware/silicium. Actif numérique disponible à l’acquisition (entreprises & institutions)." />
 
   <link rel="canonical" href="https://www.livingprocessor.com/" />
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <link rel="alternate" href="https://www.livingprocessor.com/" hreflang="fr" />
+  <link rel="alternate" href="https://www.livingprocessor.com/" hreflang="en" />
+  <link rel="alternate" href="https://www.livingprocessor.com/" hreflang="x-default" />
+  <meta name="robots" content="index,follow,max-image-preview:large">
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="LivingProcessor.com — From Silicon to Living Compute" />
-  <meta property="og:description" content="LivingProcessor.com is a category-level .com asset for the coming era of biological and hybrid processors. Asset for acquisition only." />
+  <meta property="og:title" content="LivingProcessor.com — Actif deeptech descriptif" />
+  <meta property="og:description" content="Nom de catégorie pour l’ère du « living compute » : biocomputing, processeurs biologiques & architectures hybrides wetware/silicium. Actif numérique disponible à l’acquisition." />
   <meta property="og:url" content="https://www.livingprocessor.com/" />
-  <meta property="og:image" content="https://www.livingprocessor.com/livingprocessor-og.png" />
-
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.livingprocessor.com/og.jpg" />
+  <meta property="og:image:alt" content="LivingProcessor.com — deeptech category-defining asset" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="LivingProcessor.com — From Silicon to Living Compute" />
-  <meta name="twitter:description" content="Descriptive, deeptech category domain for biocomputing and living processors. Asset available for acquisition." />
-  <meta name="twitter:image" content="https://www.livingprocessor.com/livingprocessor-og.png" />
+  <meta name="twitter:image" content="https://www.livingprocessor.com/og.jpg" />
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" as="image" href="/logo-livingprocessor.png" imagesizes="260px" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"LivingProcessor.com",
+    "url":"https://www.livingprocessor.com/",
+    "inLanguage":["fr-FR","en-GB","en-US"],
+    "description":"Nom de catégorie descriptif pour l’ère du « living compute » : biocomputing, intelligence organoïde, processeurs biologiques & architectures hybrides wetware/silicium.",
+    "sameAs":["https://www.linkedin.com/company/livingprocessor"],
+    "potentialAction":{"@type":"CommunicateAction","target":"mailto:contact@livingprocessor.com"}
+  }
+  </script>
 
   <style>
-    :root {
-      --bg: #050814;
-      --bg-alt: #07101f;
-      --fg: #f7f7fb;
-      --muted: #a7b0c9;
-      --accent: #4ee2b1;
-      --accent-soft: rgba(78, 226, 177, 0.12);
-      --border: #202842;
-      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    :root{
+      --bg:#0b1220;
+      --card:#121a2b;
+      --muted:#7a87a2;
+      --text:#e9eefc;
+      --accent:#8ab4ff;
+      --chip:#1b2640;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius:18px
     }
-
-    * {
-      box-sizing: border-box;
+    *{box-sizing:border-box}
+    html,body{
+      margin:0;
+      padding:0;
+      background:var(--bg);
+      color:var(--text);
+      font:15px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,Arial,sans-serif
     }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: radial-gradient(circle at top, #101933 0, #050814 48%, #02030a 100%);
-      color: var(--fg);
-      font-family: var(--font-sans);
-      -webkit-font-smoothing: antialiased;
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1040px;margin:0 auto;padding:28px}
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin:8px 0 22px
     }
-
-    body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 32px 16px;
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:var(--chip);
+      border:1px solid #23304a;
+      border-radius:999px;
+      padding:6px 12px;
+      color:#b7c5e6;
+      font-size:13px
     }
-
-    main {
-      max-width: 960px;
-      width: 100%;
-      background: radial-gradient(circle at top left, #111b33 0, #050814 55%, #02030a 100%);
-      border-radius: 24px;
-      border: 1px solid var(--border);
-      padding: 28px 24px 24px;
-      box-shadow:
-        0 24px 80px rgba(0, 0, 0, 0.65),
-        0 0 0 1px rgba(255, 255, 255, 0.01);
+    .lang{
+      gap:10px;
+      display:flex;
+      align-items:center
     }
-
-    header {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      margin-bottom: 20px;
+    .lang button{
+      background:var(--chip);
+      color:var(--text);
+      border:1px solid #23304a;
+      padding:7px 12px;
+      border-radius:999px;
+      cursor:pointer
     }
-
-    .logo-wrap {
-      width: 64px;
-      height: 64px;
-      border-radius: 20px;
-      background: radial-gradient(circle at 0 0, var(--accent-soft) 0, #050814 55%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      border: 1px solid rgba(78, 226, 177, 0.45);
-      overflow: hidden;
+    .lang button[aria-pressed="true"]{
+      background:var(--accent);
+      color:#0b1422;
+      border-color:transparent
     }
-
-    .logo-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+    .card{
+      background:var(--card);
+      border:1px solid #23304a;
+      border-radius:var(--radius);
+      padding:26px;
+      box-shadow:var(--shadow)
     }
-
-    .hero-text h1 {
-      font-size: 1.8rem;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      margin: 0 0 4px;
+    .hero h1{
+      margin:0 0 8px;
+      font-size:46px;
+      letter-spacing:.5px
     }
-
-    .hero-text p {
-      margin: 0;
-      font-size: 0.98rem;
-      color: var(--muted);
+    .cta{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin:18px 0 6px
     }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(9, 18, 40, 0.9);
-      border: 1px solid rgba(78, 226, 177, 0.35);
-      font-size: 0.76rem;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 10px;
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:#1a2a47;
+      color:#fff;
+      border:1px solid #26385e;
+      padding:12px 16px;
+      border-radius:999px;
+      cursor:pointer;
+      text-decoration:none
     }
-
-    .dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 12px rgba(78, 226, 177, 0.6);
+    .btn.primary{
+      background:var(--accent);
+      color:#0b1422;
+      border-color:transparent
     }
-
-    .layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-      gap: 20px;
-      margin-top: 12px;
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:18px
     }
-
-    section {
-      border-radius: 18px;
-      border: 1px solid rgba(51, 62, 102, 0.9);
-      background: linear-gradient(145deg, rgba(6, 16, 40, 0.96), rgba(5, 11, 27, 0.98));
-      padding: 14px 14px 12px;
+    .col-6{grid-column:span 6}
+    .col-12{grid-column:span 12}
+    .chip{
+      display:inline-block;
+      background:var(--chip);
+      border:1px solid #23304a;
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:13px;
+      color:#b7c5e6
     }
-
-    h2 {
-      margin: 0 0 8px;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--muted);
+    .list{
+      display:grid;
+      gap:10px;
+      margin:8px 0
     }
-
-    h3 {
-      margin: 8px 0 4px;
-      font-size: 0.95rem;
+    .muted{color:var(--muted)}
+    .foot{opacity:.8;font-size:13px;margin-top:24px}
+    img.logo{
+      max-width:260px;
+      height:auto;
+      display:block;
+      margin:8px 0 6px;
+      opacity:.95;
+      border-radius:12px
     }
-
-    p {
-      margin: 4px 0;
-      font-size: 0.9rem;
-      line-height: 1.5;
-      color: var(--fg);
+    @media (max-width:860px){
+      .col-6{grid-column:span 12}
+      .hero h1{font-size:36px}
     }
-
-    ul {
-      padding-left: 18px;
-      margin: 4px 0 0;
-    }
-
-    li {
-      font-size: 0.9rem;
-      line-height: 1.5;
-      color: var(--fg);
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    .contacts {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      margin-top: 8px;
-      font-size: 0.9rem;
-    }
-
-    .contacts a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .contacts a:hover {
-      text-decoration: underline;
-    }
-
-    .tagline {
-      font-size: 0.9rem;
-      margin-top: 2px;
-      color: var(--muted);
-    }
-
-    .lang-label {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-
-    footer {
-      margin-top: 16px;
-      padding-top: 10px;
-      border-top: 1px solid rgba(29, 38, 74, 0.9);
-      font-size: 0.72rem;
-      color: var(--muted);
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    @media (max-width: 768px) {
-      main {
-        padding: 20px 16px 16px;
-      }
-      header {
-        flex-direction: row;
-        align-items: center;
-      }
-      .hero-text h1 {
-        font-size: 1.5rem;
-      }
-      .layout {
-        grid-template-columns: 1fr;
-      }
-    }
+    .ico{width:16px;height:16px;display:inline-block;vertical-align:middle}
   </style>
 </head>
 <body>
-  <main>
-    <div class="pill">
-      <span class="dot"></span>
-      <span>Deeptech category-defining domain • Asset for acquisition only</span>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="badge">Disponible à l’acquisition</div>
+      <div class="lang">
+        <button id="btn-fr" aria-pressed="true">FR</button>
+        <button id="btn-en" aria-pressed="false">EN</button>
+      </div>
     </div>
 
-    <header>
-      <div class="logo-wrap">
-        <!-- Option 1: place livingprocessor-logo.png next to index.html -->
-        <img src="livingprocessor-logo.png" alt="LivingProcessor.com logo" loading="lazy" />
-      </div>
-      <div class="hero-text">
-        <h1>LIVINGPROCESSOR.COM</h1>
-        <p class="tagline">From silicon to living compute — descriptive .com for biological & hybrid processors.</p>
-      </div>
-    </header>
-
-    <div class="layout">
-      <!-- Colonne FR -->
-      <section aria-label="Résumé en français">
-        <div class="lang-label">FR — Résumé & positionnement</div>
-        <h2>Actif sémantique pour l’ère du « living compute »</h2>
-        <p>
-          <strong>LivingProcessor.com</strong> est un nom de domaine <strong>descriptif</strong>, pensé comme
-          <strong>nom de catégorie</strong> pour la prochaine génération de processeurs : biocomputing, intelligence
-          organoïde et architectures hybrides wetware/silicium.
-        </p>
-        <p>
-          L’actif est adapté aux directions <strong>CTO, R&amp;D, Emerging Tech, Cloud &amp; Deeptech</strong> qui souhaitent :
-        </p>
-        <ul>
-          <li>Nommer clairement des <strong>processeurs vivants / biological processing units</strong> ;</li>
-          <li>Créer une <strong>marque-ingrédient</strong> (« Living Processor Inside », etc.) ;</li>
-          <li>Ou lancer un <strong>hub industriel neutre</strong> pour le biocomputing.</li>
-        </ul>
-        <p class="muted">
-          Ce site ne vend <strong>aucune</strong> technologie, plateforme, brevet ou matériel biologique — uniquement le
-          nom de domaine <strong>livingprocessor.com</strong>.
-        </p>
-
-        <h3>Valeur stratégique (exemples de cas d’usage)</h3>
-        <ul>
-          <li><strong>Géants du semi-conducteur</strong> : gamme « Living Processor » pour datacenters et edge.</li>
-          <li><strong>Startups deeptech</strong> : devenir le <strong>synonyme public</strong> de la catégorie.</li>
-          <li><strong>Hyperscalers cloud</strong> : instances « Living Processor » à côté des GPU / TPU avec un angle Green Compute.</li>
-        </ul>
-
-        <div class="contacts">
-          <span><strong>Contacts</strong></span>
-          <span>Email • <a href="mailto:contact@livingprocessor.com">contact@livingprocessor.com</a></span>
-          <span>LinkedIn • <a href="https://www.linkedin.com/company/livingprocessor" target="_blank" rel="noopener">linkedin.com/company/livingprocessor</a></span>
-        </div>
-      </section>
-
-      <!-- Colonne EN -->
-      <section aria-label="English summary">
-        <div class="lang-label">EN — Summary & positioning</div>
-        <h2>Category-level .com for living processors</h2>
-        <p>
-          <strong>LivingProcessor.com</strong> is a <strong>descriptive, deeptech domain</strong> designed as a
-          <strong>category name</strong> for the coming wave of biological processors, organoid intelligence and
-          hybrid wetware/silicon compute.
-        </p>
-        <p>
-          This asset is aimed at <strong>CTOs, Heads of R&amp;D, Emerging Tech leaders, cloud &amp; deeptech funds</strong>
-          who want to:
-        </p>
-        <ul>
-          <li>Label <strong>living processors / biological processing units</strong> in plain language;</li>
-          <li>Build an <strong>ingredient brand</strong> (“Living Processor Inside”, etc.);</li>
-          <li>Or host a neutral <strong>industry hub</strong> for biocomputing and living compute.</li>
-        </ul>
-        <p class="muted">
-          This website does <strong>not</strong> sell any technology, product, platform, patent or biological material —
-          only the <strong>livingprocessor.com</strong> domain name.
-        </p>
-
-        <h3>C-level & CFO angle</h3>
-        <ul>
-          <li>Descriptive wording that <strong>reduces category education cost</strong> vs. invented names.</li>
-          <li>Single, scarce .com that can support <strong>long-term narrative &amp; ecosystem</strong>.</li>
-          <li>Optional, asymmetric bet on biocomputing becoming a meaningful share of future workloads.</li>
-        </ul>
-
-        <div class="contacts">
-          <span><strong>Get in touch</strong></span>
-          <span>Email • <a href="mailto:contact@livingprocessor.com">contact@livingprocessor.com</a></span>
-          <span>LinkedIn • <a href="https://www.linkedin.com/company/livingprocessor" target="_blank" rel="noopener">linkedin.com/company/livingprocessor</a></span>
-        </div>
-      </section>
-    </div>
-
-    <footer>
-      <span>
-        LivingProcessor.com is presented as a <strong>descriptive, technology-category domain name</strong>.
-        No claim of affiliation or endorsement by any third-party company, lab, university or institution.
-      </span>
-      <span>
-        No medical, ethical or regulatory approval is implied. Acquisition discussions can be conducted under NDA
-        and standard escrow protections.
-      </span>
-    </footer>
-  </main>
-</body>
-</html>
+    <!-- ================= HERO FR ================= -->
+    <section class="card hero" data-fr>
+      <h1>LivingProcessor.com</h1>
+      <img class="logo" src="/logo-livingprocessor.png" alt="LivingProcessor.com" loading="eager">
+      <p class="muted">
+        Nom de domaine <b>descriptif</b> pour l’ère du <b>« living compute »</b> :
+        biocomputing, intelligence organoïde, processeurs biologiques &
+        architectures hybrides wetware/silicium.<br>
+        <b>Actif conçu comme nom de catégorie / bannière industrielle.</b><br>
+        <b>Offres sérieuses uniquement (entreprises & institutions).</b>
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:contact@livingprocessor.com?subject=LivingProcessor.com%20-%20NDA%20%2F%20Proposition&body=Bonjour%2C%0D%0A%0D%0AJe%20souhaite%20obtenir%20votre%20NDA%20et%2Fou%20proposer%20une%20offre%20pour%20LivingProcessor.com.%0D%0AEntreprise%20%3A%20%0D%0ANom%20%2F%20Fonction%20%3A%20%0D%0AUsage%20pr%C3%A9vu%20%3A%20%0D%0ABudget%20indicatif%20%3A%20%0D%0A%0D%0ACordialement%2C">
+          Proposer une offre / Demander un NDA
+        </a>
+        <a class="btn" href="#value-fr">Pourquoi ce nom ?</a>
+        <a class="btn" href="https://www.linkedin.com/company/livingprocessor" target="_blank" rel="noopener" aria-label="Ouvrir la page LinkedIn LivingProcessor">
+          <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.85 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48
